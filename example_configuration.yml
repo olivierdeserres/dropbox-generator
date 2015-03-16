@@ -1,0 +1,6 @@
+source : "/path/to/source/"
+target : "/path/to/target/"
+templates : "/path/to/templates/"
+max_thumb_width : 250
+max_full_width : 1000
+max_full_height : 1000
