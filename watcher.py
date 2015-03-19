@@ -47,18 +47,15 @@ class SourceEventHandler(FileSystemEventHandler):
                     for f in d[2]:
                         src = path.join(d[0], f)
                         dst = path.join(d[0].replace(tp, ta), f)
-                        pst.test_readability(dst)
                         tk = tkp(pst.FileTypes.misc,
                                  pst.TaskTypes.copy,
                                  {"src": src, "dst": dst})
                         default_tasks.append(tk)
-            pst.test_readability(path.join(ta, "img/background.jpg"))
             copy_info = {"src": path.join(sc, "background.jpg"),
                          "dst": path.join(ta, "img/background.jpg")}
             default_tasks.append(tkp(pst.FileTypes.image,
                                      pst.TaskTypes.copy,
                                      copy_info))
-            pst.test_readability(path.join(ta, "img/share.png"))
             copy_info = {"src": path.join(sc, "share.png"),
                          "dst": path.join(ta, "img/share.png")}
             default_tasks.append(tkp(pst.FileTypes.image,
