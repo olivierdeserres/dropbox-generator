@@ -72,8 +72,7 @@ class SourceEventHandler(FileSystemEventHandler):
             pst.process(self.tasker.conf, default_tasks + self.tasker.tasks)
 
             # Synchronize
-            print("Push")
-            # pst.git_sync(self.tasker.conf, default_tasks + self.tasker.tasks)
+            pst.git_sync(self.tasker.conf, default_tasks + self.tasker.tasks)
 
             pst.notify(path.join(sc, "results.txt"),
                        pst.now_str() + " Generated the website succesfully.")
