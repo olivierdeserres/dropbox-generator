@@ -13,7 +13,6 @@ def main():
     args = prs.parse_args()
     conf = yaml.load(open(args.conf_path, 'r').read())
     task_manager = pst.Tasker(conf)
-    task_manager.content = task_manager.read_content()
     watcher = Watcher(task_manager)
     watcher.start()
     try:
